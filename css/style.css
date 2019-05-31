@@ -1,0 +1,59 @@
+h1 {
+    text-align:center;
+    text-decoration:underline;
+
+}
+.fancy-header {
+
+}
+main {
+    font-family: "American Typewriter", serif;
+    background-color: skyblue;
+    background-image: url(../img/background-cement-concrete-242236.jpg);
+
+}
+
+ul {
+    text-align: left;
+    list-style: square;
+}
+
+ol {
+    text-align: left;
+    list-style: upper-roman;
+}
+
+th {
+    padding: 10px;
+    font-size: 30px;
+}
+
+tr {
+    text-align: center;
+}
+
+a:link {
+    color:red;
+}
+
+a:visited {
+    color:black;
+}
+
+a:hover {
+    color:blue;
+}
+
+a:active {
+    color:green;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.head2 {
+    text-align: center;
+}
