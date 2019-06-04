@@ -58,7 +58,6 @@ a {
     float:right;
     line-height: 80px;
 
-
 }
 .profile-image {
     position: absolute;
@@ -76,7 +75,7 @@ a {
     margin: 0 .5em;
 }
 .who-to-follow {
-    float: right;
+    float: left;
     width: calc(25% - 16px);
     margin: 0 .5em;
 }
@@ -102,7 +101,7 @@ a {
 }
 .profile-items {
     list-style-type: none;
-
+    padding: 0;
 }
 .profile-entry {
     margin: .5em;
