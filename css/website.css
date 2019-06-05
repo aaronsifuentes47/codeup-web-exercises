@@ -54,3 +54,16 @@ body, html {
     border: 0;
 
 }
+.head-def {
+    position: relative;
+    bottom: 150px;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+}
+.head-top {
+    
+}
