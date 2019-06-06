@@ -1,0 +1,59 @@
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.row {
+    width: 100%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    padding: 10px;
+    border: 1px solid grey;
+}
+
+.one {
+    background-color: lightcoral;
+    width: calc(100% - 22px);
+}
+
+.one-half {
+    background-color: lightsalmon;
+    width: calc(50% - 22px);
+}
+
+.one-third {
+    background-color: lightgoldenrodyellow;
+    width: calc(calc(100% / 3) - 22px);
+}
+
+.one-fourth {
+    background-color: lightgreen;
+    width: calc(25% - 22px);
+}
+
+.one-sixth{
+    background-color: lightblue;
+    width: calc(calc(100% / 6) - 22px);
+}
+
+.one-eighth {
+    background-color: plum;
+    width: calc(calc(100% /8) - 22px);
+}
+
+@media screen and (min-width: 1px) and (max-width: 991px) {
+    .column {
+        width: 100%;
+    }
+
+}
