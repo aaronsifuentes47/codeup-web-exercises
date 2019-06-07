@@ -1,0 +1,17 @@
+.jumbotron {
+    background-image: url(../img/pizza.png);
+    /*margin: 1em;*/
+    /*width: 100%;*/
+    background-size: cover;
+}
+
+h1.display-4 {
+    width: 100%;
+    background-color: white;
+    opacity: .7;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
