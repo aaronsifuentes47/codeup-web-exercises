@@ -1,7 +1,5 @@
 .jumbotron {
     background-image: url(../img/pizza.png);
-    /*margin: 1em;*/
-    /*width: 100%;*/
     background-size: cover;
 }
 
