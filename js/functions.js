@@ -104,8 +104,8 @@ alert(calculateTip(billTip, totalBill));
      * > applyDiscount(45.99, 0.12) // 40.4712
      */
 function applyDiscount(costBefore, discountPercent) {
-    return costBefore - (costBefore *(discountPercent/100));
-
+    var total = costBefore - (costBefore *(discountPercent/100));
+    return total.toFixed(2);
     }
     var origPrice = Number(prompt("Enter Price: "));
 var discount = Number(prompt("Enter discount percent: "));
