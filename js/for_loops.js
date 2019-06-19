@@ -26,7 +26,7 @@ for (var numI = 0; numI < 11; numI++) {
     }
 }
 
-for (var stringI = 1; stringI <= 10; stringI++) {
+for (var stringI = 1; stringI < 10; stringI++) {
     var k = "";
     for (var j = 1; j <= stringI; j++) {
         k = k + stringI;
