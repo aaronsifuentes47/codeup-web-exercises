@@ -63,11 +63,11 @@ names.forEach(function(name) {
 
     }
     function second(array){
-        console.log("element at that index 1 is " + array[2])
+        console.log("element at that index 1 is " + array[1])
 
     }
     function fifth(array){
-        console.log("element at that index 4 is " + array[4])
+        console.log("element at that index 4 is " + array[array.length - 1])
 
     }
 
