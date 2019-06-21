@@ -159,9 +159,12 @@
      *      ...
      */
 books.forEach(function(book){
-    console.log("Book #" + (books.indexOf(book) + 1) + "\n" +
-        "Title: " + book.title + "\n" +
-        "Author: " + book.author.firstName + " " + book.author.lastName)
+    var output = "";
+    output += "Book #" + (books.indexOf(book) + 1) + "\n";
+    output += "Title: " + book.title + "\n";
+    output += "Author: " + book.author.firstName + " " + book.author.lastName;
+    console.log(output);
+    return output;
 });
     /**
      * Bonus:
@@ -169,10 +172,24 @@ books.forEach(function(book){
      *   name and returns a book object with the properties described
      *   previously. Refactor your code that creates the books array to instead
      *   use your function.
+     */
+
+     /**
      * - Create a function named `showBookInfo` that accepts a book object and
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
 
+   function createBook(title, firstName, lastName) {
+       var book = "title: " + title + "\n" +
+           "author: " + firstName + " " +
+           lastName;
+       return book;
+   }
 
+   books.push(createBook("Hank the Cowdog", "John Erickson"));
+   console.log(books);
+console.log(createBook("holes", "louis sachar"));
 })();
+
+
