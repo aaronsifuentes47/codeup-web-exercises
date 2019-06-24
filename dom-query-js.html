@@ -7,6 +7,7 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button type="button" id="bootan1">BOOTAN</button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -14,7 +15,9 @@
     <li data-dbid="4">Item 4</li>
     <li data-dbid="5">Item 5</li>
 </ul>
+<button type="button" id="bootan3">BOOTAN</button>
 <h2 id="sub-header">Hello Again.</h2>
+<button type="button" id="bootan2">BOOTAN</button>
 <p class="sub-paragraph">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -24,6 +27,7 @@
     pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
     culpa qui officia deserunt mollit anim id est laborum.
 </p>
+<button type="button" id="bootan4">BOOTAN</button>
 
 <script>
     (function() {
@@ -31,26 +35,39 @@
         // TODO: Uncomment next line and get the main header element by id
 
         var mainHeader = document.getElementById('main-header');
-
+        var button1 = document.getElementById('bootan1');
 
         // TODO: Set inner html of mainHeader to "JavaScript is Cool"
 
-        mainHeader.innerHTML = "JavaScript is Cool";
+        button1.addEventListener('click', function(){
+            // this.innerHTML = mainHeader.innerHTML;
+            mainHeader.innerHTML = "JavaScript is Cool!"
+
+        },false);
+        // mainHeader.innerHTML = "JavaScript is Cool";
+
 
         // TODO: Uncomment the next line and get the sub header element by id
 
         var subHeader = document.getElementById('sub-header');
+        var button2 = document.getElementById('bootan2');
 
         // TODO: Set the text color of subHeader to blue
-
+        button2.addEventListener('click', function(){
         subHeader.style.color = 'blue';
+        },false);
+
+        // subHeader.style.color = 'blue';
 
         // TODO: Uncomment the next line and get all list items
 
         var listItems = document.getElementsByTagName('li');
         console.log(listItems);
+        var button3 = document.getElementById('bootan3');
 
         // TODO: Set text color on every other list item to grey
+
+        button3.addEventListener('click', function(){
 
         for(var i = 0; i < listItems.length; i+=2) {
             if (listItems[i].getAttribute('data-dbid')== 1) {
@@ -60,6 +77,7 @@
 
             }
         }
+        }, false);
 
         // TODO: Set text color of li with dbid = 1 to blue
 
@@ -70,10 +88,19 @@
 
         var subParagraphs = document.getElementsByClassName('sub-paragraph') ;
         console.log(subParagraphs);
+        var button4 = document.getElementById('bootan4');
 
         // TODO: Change the text in the first sub paragraph to "Mission Accomplished!"
-
+        button4.addEventListener('click', function(){
         subParagraphs[0].innerText = 'Mission Accomplished!';
+
+        },false);
+        // subParagraphs[0].innerText = 'Mission Accomplished!';
+
+        // TODO: Add 4 buttons to the page.
+        // TODO: Attach click event listeners to each of the buttons and have the handlers perform the modifications that were--
+        // TODO: -- automatically taking place.
+        // TODO:  For example, the first button should set inner html of mainHeader to "JavaScript is Cool".
 
     })();
 </script>
