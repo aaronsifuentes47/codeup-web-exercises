@@ -1,8 +1,8 @@
 "use strict";
 
 
-var images = document.getElementsByTagName('img');
-console.log(images);
+// var images = document.getElementsByTagName('img');
+// console.log(images);
 var snd = new Audio("img/barrel.wav");
 console.log(snd);
 var konami = [38,38,40,40,37,39,37,39,66,65,13];
@@ -16,7 +16,6 @@ $(document).on('keyup',function(event){
             snd.play();
         }
 });
-
 
 
 
