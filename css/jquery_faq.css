@@ -1,0 +1,21 @@
+dt {
+    text-align: center;
+}
+dd {
+    text-align: center;
+}
+.invisible {
+    visibility: hidden;
+}
+.color-red {
+    background-color: red;
+}
+.highlighter {
+    background-color: yellow;
+}
+.close {
+    text-align: right;
+}
+.close:active {
+    color: grey;
+}
