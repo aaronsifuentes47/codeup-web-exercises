@@ -3,3 +3,5 @@
 *.iml
 js/keys.js
 js/jquery-2.2.4.js
+extra.html
+js/extra.js

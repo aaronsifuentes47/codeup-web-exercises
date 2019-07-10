@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+
+<table id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+<button id="refresh" type="button">refresh</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+(function() {
+    "use strict";
+    // TODO: Create an ajax GET request for /data/inventory.json
+
+    var request = $.ajax("./data/inventory.json");
+
+    request.done(function(info){
+    $('#insertProducts').html(buildHtml(info));
+    });
+
+
+    // TODO: Take the data from inventory.json and append it to the products table
+
+
+    function buildHtml(data) {
+        var toolHtml = "";
+            for (var i = 0; i < data.length; i++) {
+                toolHtml += '<tr>';
+                toolHtml += '<td>' + data[i].title + '</td>';
+                toolHtml += '<td>' + data[i].quantity + '</td>';
+                toolHtml += '<td>' + data[i].price + '</td>';
+                toolHtml += '<td>' + data[i].categories + '</td>';
+                toolHtml += '</tr>';
+            }
+        return toolHtml;
+    }
+
+
+
+    $('#refresh').on('click',function(){
+        request.done(function(info){
+            console.log(info);
+            $('#insertProducts').html(buildHtml(info));
+        });
+    });
+    //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+    //             its contents and fields
+    //       HINT: You will want to target #insertProducts for your new HTML elements
+})();
+</script>
+
+</body>
+</html>

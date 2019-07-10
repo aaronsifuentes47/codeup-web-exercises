@@ -2,7 +2,8 @@
 
 $(document).ready(function() {
     $('dt').on('click', function(){
-        $('dd').toggleClass('invisible');
+        $(this).next().toggleClass('invisible');
+        // $('dd').toggleClass('invisible');
     });
 
     $('dd').on('click',function() {
