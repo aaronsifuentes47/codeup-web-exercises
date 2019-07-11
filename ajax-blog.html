@@ -3,22 +3,43 @@
     <head>
         <meta charset="UTF-8">
         <title>Title</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
-    <body>
-        <div id="posts">
-
+    <body class="bg-secondary container">
+        <header class="row">
+            <h2 class="col-12">Reading with a Turn</h2>
+        </header>
+        <div class="container">
+            <div id="posts" class="row">
+            </div>
+            <button id="boot" class='offset-3' type="button">update</button>
         </div>
         <script src="js/jquery-2.2.4.js"></script>
         <script>
-            (function() {
+            $(document).ready(function() {
                 "use strict";
-                var source = $.ajax('.data/blog.json');
-
-
-
-
-
-            }());
-        </script>
+                var source = $.ajax('data/blog.json');
+                console.log(source);
+                function buildHtml(data) {
+                    var blogInfo = "";
+                    data.forEach(function(post){
+                        blogInfo += '<div class="bg-dark text-white col-4" >';
+                        blogInfo += '<h1>' + post.title + '</h1>';
+                        blogInfo += '<p>' + post.content + '</p>';
+                        blogInfo += '<h6>' + post.categories + '</h6>';
+                        blogInfo += '<h6>' + post.date + '</h6>';
+                        blogInfo += '</div>';
+                        console.log(blogInfo);
+                    });
+                    return blogInfo;
+                }
+                $('#boot').on('click',function(){
+                    $.ajax('data/blog.json').done(function(info) {
+                        console.log(info);
+                        $('#posts').html(buildHtml(info))
+                    });
+                });
+            });
+            </script>
     </body>
 </html>
