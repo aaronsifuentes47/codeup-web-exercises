@@ -7,7 +7,8 @@ $(document).ready(function(){
             var weather = "";
             // data.forEach(function(data){
                 weather += '<div class="text-dark col-4">';
-                // weather += '<dd>' + data.timezone + '</dd>';
+                weather += '<img src="img/">';
+                weather += '<div>' + 'high ' + data.daily.data[0].apparentTemperatureHigh + '/' + 'Low ' + data.daily.data[0].apparentTemperatureLow + '</div>';
                 weather += '<div>' + data.currently.summary + '</div>';
                 weather += '<div>' + "Current Temperature: " +  data.currently.temperature + '</div>';
                 weather += '<div>' + 'Wind: ' + data.currently.windSpeed + '</div>';
@@ -18,17 +19,21 @@ $(document).ready(function(){
             return weather;
         }
 
-        $('#getCoords', '#map').on('click',function(e) {
+        $('#getCoords').on('click',function(e) {
             e.preventDefault();
             var lat = $('#lati').val();
             var long = $('#long').val();
-            new mapboxgl.Marker()
-                .setLngLat([long, lat])
-                .addTo(map);
-
-            console.log(lat);
-            console.log(long);
-
+            function reverseGeocode(coordinates, token) {
+                var baseUrl = 'https://api.mapbox.com';
+                var endPoint = '/geocoding/v5/mapbox.places/';
+                return fetch(baseUrl + endPoint + long + "," + lat + '.json' + "?" + 'access_token=' + token)
+                    .then(function (res) {
+                        return res.json(    )
+                .then(function(data) {
+                    return data.features[0].place_name;
+                    });
+                });
+            }
         });
 
         mapboxgl.accessToken = mapboxtoken;
