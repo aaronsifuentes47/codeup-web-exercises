@@ -6,9 +6,9 @@ $(document).ready(function(){
         function buildHtml(data) {
             var weather = "";
             // data.forEach(function(data){
-                weather += '<div class="text-dark col-4" >';
+                weather += '<div class="text-dark col-4 dayBox" >';
                 // weather += '<dd>' + data.timezone + '</dd>';
-                weather += '<p>' + data.currently.summary + '</p>';
+                weather += '<div>' + data.currently.summary + '</div>';
                 weather += '<div>' + "Current Temperature: " +  data.currently.temperature + '</div>';
                 weather += '<div>' + 'Wind: ' + data.currently.windSpeed + '</div>';
                 weather += '<div>' + 'humidity: ' + data.currently.humidity + '</div>';

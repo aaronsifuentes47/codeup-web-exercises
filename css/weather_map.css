@@ -10,7 +10,10 @@
     width: 90%;
     border: solid darkgrey 3px;
 }
-
+.center {
+    text-align: center;
+    margin: auto;
+}
 #title {
     display: block;
     font-size: 2em;
@@ -26,4 +29,9 @@
 
 .coords {
     margin: 0 auto;
+}
+
+.dayBox {
+    background-color: grey;
+
 }
