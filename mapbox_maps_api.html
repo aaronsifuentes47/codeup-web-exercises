@@ -28,12 +28,13 @@
 
     });
 
-    // var marker = new mapboxgl.Marker()
-    //     .setLngLat([-98.4916, 29.4260])
-    //     .addTo(map);
+    var marker = new mapboxgl.Marker()
+        .setLngLat([-98.4916, 29.4260])
+        .addTo(map);
 
+    //
     // var popup = new mapboxgl.Popup()
-    //     // .setLngLat([-98.695, 29.4279])
+    //     .setLngLat([-98.695, 29.4279])
     //     .setHTML("<p>look here!</p>")
     //     .addTo(map);
     //
@@ -47,8 +48,7 @@
 
     function placeMarkerAndPopup(info, token, map) {
         geocode(info.address, token).then(function(coordinates) {
-            var popup = new mapboxgl.Popup()
-                .setHTML(info.popupHTML);
+            var popup = new mapboxgl.Popup().setHTML(info.popupHTML);
             var marker = new mapboxgl.Marker()
                 .setLngLat(coordinates)
                 .addTo(map)

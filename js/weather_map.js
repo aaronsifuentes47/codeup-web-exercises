@@ -6,7 +6,7 @@ $(document).ready(function(){
         function buildHtml(data) {
             var weather = "";
             // data.forEach(function(data){
-                weather += '<div class="text-dark col-4 dayBox" >';
+                weather += '<div class="text-dark col-4">';
                 // weather += '<dd>' + data.timezone + '</dd>';
                 weather += '<div>' + data.currently.summary + '</div>';
                 weather += '<div>' + "Current Temperature: " +  data.currently.temperature + '</div>';
@@ -18,10 +18,16 @@ $(document).ready(function(){
             return weather;
         }
 
-        $('#getCoords').on('click',function(e) {
+        $('#getCoords', '#map').on('click',function(e) {
             e.preventDefault();
             var lat = $('#lati').val();
             var long = $('#long').val();
+            new mapboxgl.Marker()
+                .setLngLat([long, lat])
+                .addTo(map);
+
+            console.log(lat);
+            console.log(long);
 
         });
 
