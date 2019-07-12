@@ -1,0 +1,29 @@
+/*#weathInfo {*/
+/*    margin: auto;*/
+
+/*}*/
+
+#weather {
+    background-color: lightblue;
+    margin: auto;
+    height: 300px;
+    width: 90%;
+    border: solid darkgrey 3px;
+}
+
+#title {
+    display: block;
+    font-size: 2em;
+    /*text-align: center;*/
+    margin: auto;
+    font-weight: bold;
+}
+
+#map {
+    margin: 2em auto;
+    width: 80%;
+}
+
+.coords {
+    margin: 0 auto;
+}
