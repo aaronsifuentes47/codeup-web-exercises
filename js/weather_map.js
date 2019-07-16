@@ -40,13 +40,55 @@ $(document).ready(function() {
             weather += '<div class="col-12 bg-info center">';
             weather += '<h1>' + 'weather for after tomorrow' + '</h1>';
             weather += '<h5 class=center>' + 'high ' + source.daily.data[2].apparentTemperatureHigh + '/Low ' + source.daily.data[1].apparentTemperatureLow + '</h5>';
-            weather += '<img src="img/">';
+            weather += '<img src=' + + '>';
             weather += '<div class="center">' + source.daily.data[2].summary + '</div>';
             weather += '<div>' + 'humidity: ' + source.daily.data[2].humidity + '</div>';
             weather += '<div>' + 'wind: ' + source.daily.data[2].windSpeed + '</div>';
             return weather;
         });
 
+
+        var icons = [ {
+            name: 'clear-day',
+            icon:'img/climacons-master/SVG/Sun.svg'
+            },
+            {
+                name: 'clear-night',
+                icon:'img/climacons-master/SVG/Moon.svg'
+            },
+            {
+                name:'rain',
+                icon:'img/climacons-master/SVG/Cloud-Drizzle.svg'
+            },
+            {
+                name:'snow',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'sleet',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'wind',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'fog',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'cloudy',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'partly-cloudy-day',
+                icon:'img/climacons-master/SVG/'
+            },
+            {
+                name:'partly-cloudy-night',
+                icon:'img/climacons-master/SVG/'
+            }
+            ];
 
         // $('#getCoords').on('click', function (e) {
         //     var lat = $('#lati').val();
