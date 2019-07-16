@@ -5,19 +5,27 @@
         <title>weather map</title>
         <link rel="stylesheet" href="css/weather_map.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
     </head>
-    <body>
-        <div id="weather" class="container"><span id="title">Weather for today</span>
+    <body class="mx-auto">
+    <div class="container">
+        <div id="weather" class="row bg-info">
+<!--            <span id="title" class="col-12">Weather for today</span>-->
+<!--            <h3 id="cityName">San Antonio</h3>-->
             <div class="row">
-            <h3 id="cityName">San Antonio</h3>
             </div>
             <br>
-            <div id="insertData" class="center row">
+            <div id="insertData" class="margin-auto col-4">
+            </div>
+            <div id="insertData2" class="margin-auto col-4">
+            </div>
+            <div id="insertData3" class="margin-auto col-4">
             </div>
         </div>
+    </div>
         <br>
+        <label for="lati">latitude</label>
         <input name="lat" id="lati" class="coords" type="text" placeholder="enter latitude here...">
+        <label for="long">longitude</label>
         <input name="lng" id="long" class="coords" type="text" placeholder="enter longitude here...">
         <button id="getCoords" type="button">BUTTON</button>
         <div id="map">

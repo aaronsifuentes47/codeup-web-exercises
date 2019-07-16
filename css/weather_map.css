@@ -3,13 +3,13 @@
 
 /*}*/
 
-#weather {
-    background-color: lightblue;
-    margin: auto;
-    height: 300px;
-    width: 90%;
-    border: solid darkgrey 3px;
-}
+/*#weather {*/
+/*    background-color: lightblue;*/
+/*    margin: auto;*/
+/*    height: 300px;*/
+/*    width: 90%;*/
+/*    border: solid darkgrey 3px;*/
+/*}*/
 .center {
     text-align: center;
     margin: auto;
@@ -35,3 +35,7 @@
     background-color: grey;
 
 }
+
+/*#insertData {*/
+/*    background-color: darkgrey;*/
+/*}*/
