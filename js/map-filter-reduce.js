@@ -62,5 +62,11 @@ const allNames = users.reduce((names, user,index,arr) => {
 
 console.log(allNames);
 
-const unique = new Set();
-
+const unique = users.reduce((prev, current) => {
+    const langs = current.languages;
+    for (const lang of langs){
+        prev.add(lang)
+    }
+    return prev;
+},new Set);
+console.log(unique);
