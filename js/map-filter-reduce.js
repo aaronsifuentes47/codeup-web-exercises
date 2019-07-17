@@ -42,7 +42,25 @@ console.log(userLangs);
 const emails = users.map(user => user.email);
 console.log(emails);
 
+
 const sumYears = users.reduce((totalYears, user) => {
     return totalYears + user.yearsOfExperience;
 }, 0);
 console.log(sumYears);
+console.log(sumYears/users.length);
+
+let longest = users.reduce(function (a, b) { return a.email.length > b.email.length ? a : b; });
+console.log(longest.email);
+
+const allNames = users.reduce((names, user,index) => {
+    if (index === users.length - 1) {
+        return `${names} ${user.name}.`
+    } else {
+        return `${names} ${user.name},`
+    }
+}, 'your instructors names are: ');
+
+console.log(allNames);
+
+const unique = new Set();
+
