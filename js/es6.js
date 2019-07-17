@@ -63,7 +63,7 @@ for (let user of users) {
 }
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(function(user) {
+for (let user of users) {
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
@@ -74,8 +74,8 @@ users.forEach(function(user) {
   const {name,email,languages} = user;
 
   // TODO: rewrite the assignment below to use template strings
-  developers.push(`${name}\'s email is ${email}. ${name} knows ${languages.join(', ')}`);
-});
+  developers.push(`${name}'s email is ${email}. ${name} knows ${languages.join(', ')}`);
+}
 
 // TODO: Use `let` for the following variable
 let list = '<ul>';
