@@ -70,7 +70,3 @@ const unique = users.reduce((prev, current) => {
     return prev;
 },new Set);
 console.log(unique);
-console.log(unique);
-console.log(unique);
-console.log(unique);
-console.log(unique);
